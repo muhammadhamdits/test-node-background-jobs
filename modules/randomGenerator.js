@@ -35,5 +35,6 @@ module.exports = {
   generateText,
   generateNumber,
   generateAlphanumeric,
-  generateAlphanumericSpecialCharacters
+  generateAlphanumericSpecialCharacters,
+  getRandomInt
 }
