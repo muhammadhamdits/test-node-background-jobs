@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
   BackgroundJob.init({
     worker: DataTypes.STRING,
     arguments: DataTypes.STRING,
-    time: DataTypes.BIGINT
+    time: DataTypes.BIGINT,
+    state: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'BackgroundJob',

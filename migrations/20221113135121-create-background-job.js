@@ -18,6 +18,9 @@ module.exports = {
       time: {
         type: Sequelize.BIGINT
       },
+      state: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

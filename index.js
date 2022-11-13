@@ -6,6 +6,14 @@ const randomGenerator = require('./modules/randomGenerator')
 const app = express()
 const port = 3000
 
+setInterval(async () => {
+  const jobs = await testSmallModule.getPendingJobs()
+  jobs.forEach(async (job) => {
+    await testSmallModule.executeJob(job)
+    await job.update({ state: 'executed' })
+  })
+}, 60000)
+
 app.get('/', async (req, res) => {
   data = await testSmallModule.get()
 
